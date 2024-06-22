@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.Cradle {
+    margin: auto;
+    width: 50%;
+    border-block: 10px solid whitesmoke;
+    box-shadow: 0px 0px 10px 4px whitesmoke;
+
+}
+
+.parentCradle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0px 0px 10px 4px whitesmoke;
+}
+
+
+.childCradle {
+    width: 10px;
+    height: 300px;
+    border-block: 1px solid rgb(50, 2, 120);
+    background-color: whitesmoke;
+    border-radius: 1px;
+    position: relative;
+
+}
+
+.parentCradle .childCradle:first-child {
+    animation-name: cradle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: top center;
+
+}
+
+.parentCradle .childCradle:last-child {
+    animation-name: cradles;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+}
+
+.childCradle::after {
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: -20px;
+    border: 1px solid whitesmoke;
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: wheat;
+}
+
+@keyframes cradle {
+    0% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: 30deg;
+    }
+    50% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes cradles {
+    0% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: -30deg;
+    }
+    50% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
