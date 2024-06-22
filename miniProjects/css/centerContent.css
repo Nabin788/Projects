@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    Padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    /* we can center the content in a page by using flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    /* we can place text center in the container by using grid */
+    /* we can also center contain by using display : flex ; in a parent
+    and margin auto in a child  */
+    /* we can also center contain using \
+    position: absolute;
+    top:50%;
+    left:50%; 
+    transform: translate(-50%, -50%)*/
+    /* we can also used margin: auto; to center content if width and height
+    are same. */
+    display: grid;
+    place-items: center;
+    border-block:5px dotted white ;
+    border-inline: 5px double rgb(10, 0, 0);
+    box-shadow: 5px 10px 100px 50px whitesmoke;
+
+    border-radius: 50%;
+    /* animation to totete container infinite time */
+    /* animation: rotate 2s linear infinite */
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+h1 {
+    text-transform: uppercase;
+    cursor: pointer;
+    /* Counter-rotate the h1 element */
+    /* now only container will be rotate */
+    animation-name: counter-rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes counter-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+h1:hover {
+    scale: 2;
+    text-shadow: 0px 0px 30px whitesmoke;
+    color: rgb(222, 201, 201);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
