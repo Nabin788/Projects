@@ -1,0 +1,145 @@
+/** Reseting page  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** 2. Redefine page font  **/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    /*? Smooth transition for dark mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*! Dark mode styles */
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0; 
+    }
+
+    .navbar a {
+        color: #e0e0e0;
+    }
+
+    header {
+    background-color: #1c1c1c;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .navbar ul {
+        border-color: #e0e0e0;
+    }
+
+} */
+
+/*? root for defining variable for color  */
+:root {
+    --main-color: black;
+    --box-shadow: rgba(49, 46, 46, 0.35) 0px 5px 15px;
+    --nav-color: rgba(24, 24, 24, 0.778);
+}
+
+/** starting navbar and  placing logo within a letter  */
+header {
+    width: 100vw;
+    position: fixed;
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    grid-template-columns: repeat(3, 470px);
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo .logo-img {
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    animation: logo-rotate 1s linear infinite alternate;
+}
+
+@keyframes logo-rotate {
+    from {
+        rotate: 10deg;
+    }
+
+    to {
+        rotate: -10deg;
+    }
+}
+
+.logo h1 {
+    text-transform: capitalize;
+}
+
+h1::first-letter {
+    letter-spacing: 38px;
+}
+
+/** designing navbar  */
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+
+#security {
+    justify-content: end;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: var(--nav-color);
+    font-weight: bolder;
+}
+
+li a:hover {
+    scale: 1.1;
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+li a::after {
+    content: "";
+    border-bottom: 2px solid black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    width: 0%;
+    transition: all 0.5s linear;
+}
+
+li a:hover::after {
+    width: 100%;
+    color: var(--main-color);
+}
