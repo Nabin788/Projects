@@ -11,7 +11,7 @@ body {
     /* we can center the content in a page by using flexbox */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .container {

@@ -41,20 +41,26 @@ body {
 
 /*? root for defining variable for color  */
 :root {
+    --text-color: #ece8f1;
     --main-color: black;
-    --box-shadow: rgba(49, 46, 46, 0.35) 0px 5px 15px;
+    --white-color: white;
+    --button-color: blue;
     --nav-color: rgba(24, 24, 24, 0.778);
+    --linear-color: linear-gradient(to top, #5c03f6, #8a9dcb);
+    --button-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    --nav-boxShadow: rgba(49, 46, 46, 0.35) 0px 5px 15px;
+    --box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 /** starting navbar and  placing logo within a letter  */
 header {
     width: 100vw;
-    position: fixed;
     display: grid;
     gap: 20px;
     padding: 10px;
-    grid-template-columns: repeat(3, 470px);
+    grid-template-columns: repeat(3, 0.33fr);
     box-shadow: var(--box-shadow);
+    background-color: var(--white-color);
 }
 
 header .logo {
@@ -73,11 +79,11 @@ header .logo {
 
 @keyframes logo-rotate {
     from {
-        rotate: 10deg;
+        transform: rotate(10deg);
     }
 
     to {
-        rotate: -10deg;
+        transform: rotate(-10deg);
     }
 }
 
@@ -131,15 +137,96 @@ li a:hover {
 
 li a::after {
     content: "";
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--main-color);
     position: absolute;
     bottom: 1px;
     left: 1px;
     width: 0%;
     transition: all 0.5s linear;
+
 }
 
 li a:hover::after {
     width: 100%;
     color: var(--main-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 730px;
+    background: var(--linear-color);
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+main h2 {
+    position: absolute;
+    top: 10px;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    animation: container 2s linear infinite;
+
+
+    & .mobile-container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 60px;
+    }
+
+
+    & .sliding-container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+    }
+
+    & h3 {
+        font-size: xx-large;
+        padding: 5px;
+        height: 50px;
+    }
+
+    & pre {
+        color: var(--text-color);
+        text-transform: capitalize;
+        position: absolute;
+        font-size: 16px;
+        top: 70px;
+        left:0.2px;
+    }
+}
+
+@keyframes container {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
 }
