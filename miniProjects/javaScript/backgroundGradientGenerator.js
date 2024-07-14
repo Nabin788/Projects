@@ -1,8 +1,10 @@
+// ! Reference the HTMl element
 let button1 = document.getElementById("btn1");
 let button2 = document.getElementById("btn2");
 let button3 = document.getElementById("btn3");
 let gradientCode = document.querySelector(".gradient-code");
 
+// ? Function to generate randon gradient color.
 let gradientColor = (() => {
     let color = "#";
     let hashValue = "0123456789abcdef";
@@ -12,10 +14,12 @@ let gradientColor = (() => {
     return color;
 });
 
+// ? Two variable to store random gradient color
 let gradientColors = gradientColor();
 let gradientColors1 = gradientColor();
 
 
+// ? this function generate random gradient color, create class animation in html and rewrite gradient color code. 
 const haxGradientColor1 = (() => {
     gradientColors = gradientColor();
     console.log(gradientColors);
@@ -36,7 +40,9 @@ const haxGradientColor2 = (() => {
     button2.innerText = `${gradientColors1}`;
 
 });
+// ? this function generate random gradient color, create class animation in html and rewrite gradient color code. 
 
+// ? Animation function to add animation class, change background color of button and copy the text of gradientCode class.
 const animatioSlide = (() => {
     button3.classList.add("animation");
     button3.style.backgroundColor = "blue";
@@ -46,7 +52,7 @@ const animatioSlide = (() => {
     });
 });
 
-
+// ? This line add the click addevent listeners for each button
 button1.addEventListener("click", haxGradientColor1);
 button2.addEventListener("click", haxGradientColor2);
 button3.addEventListener("click", animatioSlide);
