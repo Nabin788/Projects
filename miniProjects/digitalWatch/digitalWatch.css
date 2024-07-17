@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+
+}
+
+
+
+.clock-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height: 8rem;
+}
+
+.paragraph {
+    position: relative;
+    top: 2.7rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 29.9rem;
+    height: 10rem;
+
+}
+
+.container {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border: 10px dotted white;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite alternate;
+    box-shadow: 0 0 1rem 0 purple;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+        transform: scale(120%);
+
+    }
+
+    to {
+        rotate: 360deg;
+
+    }
+}
