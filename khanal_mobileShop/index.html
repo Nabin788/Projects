@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Welcome to Khnalal Mobile shop. We have latest mobile phone and smart watches as well as we can provice googles.
+    we can provide other services such as repairing and maintenance.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Khanal Mobile Shop</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="#home"><img class="logo-img" src="./public/headerLogo/logo-img.jpg" alt="Please waite.."></a>
+      <h1>khanal mobile center</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#cart" class="icon"><i class="fa-solid fa-cart-shopping"></i> 0</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar" id="security">
+      <ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#signup">sigin up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section-products">
+    <div class="section-heading">
+      <h1 class="head"> Check Our Products </h1>
+    </div>
+    <section class="container">
+      <div class="productContainer">
+      </div>
+    </section>
+  </section>
+
+  <!--  product template  -->
+  <template class="product-template">
+    <section class="product-container">
+      <div class="product-list">
+        <h1 class="product-name"></h1>
+        <div class="product-available"></div>
+        <div class="img-container">
+          <img src="./public/mobile-img/redmi 10 pro.jpg" alt="please waite.." class="img">
+        </div>
+
+        <div class="star">
+          <i class="fa-regular fa-star bg"></i>
+          <i class="fa-regular fa-star bg"></i>
+          <i class="fa-regular fa-star bg"></i>
+          <i class="fa-regular fa-star bg"></i>
+          <i class="fa-regular fa-star bg"></i>
+        </div>
+
+        <p class="description">
+        </p>
+
+        <div class="option">
+          <div class="choose choose1">
+            <label for="ram" class="memory-info">Sorry</label>
+            <input type="checkbox" id="ram" class="choose-memory" name="ram">
+          </div>
+          <div class="choose choose2">
+            <label for="ram1" class="memory-info1">Sorry</label>
+            <input type="checkbox" id="ram1" class="choose-memory" name="ram1">
+          </div>
+        </div>
+
+        <div class="price-quantity">
+          <p class="price"> Price of: Rs.0</p>
+          <div class="quantity">
+            <button class="increment">+</button>
+            <p class="quantity-number">0</p>
+            <button class="decrement">-</button>
+          </div>
+        </div>
+
+        <div class="addButton">
+          <i id="cartPlus" class="fa-solid fa-cart-plus"></i>
+          <button class="addbtn">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+  </template>
+  <!--  product template  -->
+
+  <section class="all-product">
+    <button class="all-producList">
+      <a href="contact">Found More</a>
+    </button>
+  </section>
+
+  <section class="why-khanal">
+    <h2 class="contents">Why Khanal MobileCenter</h2>
+
+    <div class="khanal-img">
+      <img src="./public/kamal_uncle-removebg-preview.png" alt="Please waite.." class="person-img">
+    </div>
+
+    <div class="short-des">
+      <p class="des left-des">For competitive prices and exceptional customer service,
+        ensuring
+        you get the best deals and support for your mobile needs. Trust in our wide selection of top brands and quality
+        products.</p>
+      <p class="des left-des1">To enjoy unbeatable prices and personalized service,
+        providing a
+        seamless shopping experience for all your mobile essentials. Discover the latest models and accessories from
+        trusted brands.</p>
+
+      <p class="des right-des">Khanal Mobile Center offers a unique blend of affordability and expertise, making it the
+        ideal destination for your mobile purchases. Experience our commitment to quality and customer satisfaction with
+        every visit.</p>
+      <p class="des right-des1">Visit Khanal Mobile Center for the latest in mobile technology at the best prices,
+        backed by
+        our knowledgeable staff ready to assist you. Enjoy a hassle-free buying experience with our extensive product
+        range.</p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="parent-footer">
+
+      <div class="shoping-footer">
+        <h3>Servicess</h3>
+        <ul class="list shoping-list">
+          <li>Mobile Phone</li>
+          <li>Mobile Repair</li>
+          <li>Smart Watch</li>
+          <li>Head Phones</li>
+        </ul>
+      </div>
+
+      <div class="experience-footer">
+        <h4>Experience</h4>
+        <ul class="list experience-list">
+          <li>Delivery</li>
+          <li>Contact Us</li>
+          <li>Payment Method</li>
+          <li>Return and Exchange</li>
+        </ul>
+      </div>
+
+      <div class="newlettr-footer">
+        <h5>News Letter</h5>
+        <p class="news-letter">
+          Be the first to know about latest products and other servoces
+        </p>
+        <input type="email" id="submit-btn" placeholder="your email address">
+      </div>
+    </div>
+
+    <p class="copyRight">&copy; 2024 Khanal Mobile Center. All Right Reserved</p>
+  </footer>
+  
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
