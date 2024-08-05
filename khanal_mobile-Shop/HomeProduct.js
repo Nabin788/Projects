@@ -19,6 +19,7 @@ export const homeProductList = (product) => {
             templateClone.querySelector(".choose2").style.display = "none";
         }
         templateClone.querySelector(".product-available").innerText = `Total Stock: ${stock}`
+        templateClone.querySelector(".img").src = image;
         templateClone.querySelector(".description").innerText = description;
 
         displayTemplate.append(templateClone);
