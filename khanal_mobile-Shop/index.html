@@ -19,15 +19,15 @@
 <body>
   <header>
     <div class="logo">
-      <a href="/"><img class="logo-img" src="./images/headerLogo/logo-img.jpg" alt="Please waite.."></a>
-      <a href="/"><h1>khanal mobile center</h1></a>
+      <a href="#home"><img class="logo-img" src="./images/headerLogo/logo-img.jpg" alt="Please waite.."></a>
+      <a href="#home"><h1>khanal mobile center</h1></a>
     </div>
     <nav class="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#product">Products</a></li>
         <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#cart" class="icon"><i class="fa-solid fa-cart-shopping"></i> 0</a></li>
+        <li><a href="#cart" class="icon"><i class="fa-solid fa-cart-shopping"> 0 </i></a></li>
       </ul>
     </nav>
     <nav class="navbar" id="security">
@@ -51,7 +51,7 @@
   <!--  product template  -->
   <template class="product-template">
     <section class="product-container">
-      <div class="product-list">
+      <div class="product-list" id="card">
         <h1 class="product-name"></h1>
         <div class="product-available"></div>
         <div class="img-container">
@@ -81,7 +81,7 @@
         </div>
 
         <div class="price-quantity">
-          <p class="price"> Price of: Rs.0</p>
+          <!-- <p class="price"> Price of: Rs.0</p> -->
           <div class="quantity">
             <button class="increment">+</button>
             <p class="quantity-number">1</p>
