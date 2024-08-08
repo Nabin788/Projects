@@ -1,5 +1,5 @@
-// Import the homeProductList function from the HomeProduct module
 import { homeProductList } from "./HomeProduct.js";
+
 
 // Define an asynchronous function to load products from a JSON file
 async function loadProducts() {
@@ -25,3 +25,4 @@ async function loadProducts() {
 
 // Call the loadProducts function to initiate the product loading process
 loadProducts();
+

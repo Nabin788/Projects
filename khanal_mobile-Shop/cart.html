@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Welcome to Khnalal Mobile shop. We have latest mobile phone and smart watches as well as we can provice googles.
+    we can provide other services such as repairing and maintenance.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Khanal Mobile Shop</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="./index.html"><img class="logo-img" src="./images/headerLogo/logo-img.jpg" alt="Please waite.."></a>
+      <a href="./index.html" class="logo-name">
+        <h1>khanal mobile center</h1>
+      </a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./index.html" class="home">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li class="addTO-cart"><a href="#cart" class="icon"><i class="fa-solid fa-cart-shopping"> 0 </i></a></li>
+      </ul>
+    </nav>
+    <nav class="navbar" id="security">
+      <ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#signup">sigin up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ! add to cart -->
+  <template class="product-section">
+    <section class="product-container">
+      <div class="product-list1" id="card">
+        <h1 class="product-name"></h1>
+        <div class="img-container1">
+          <img src="" alt="please waite.." class="img1">
+        </div>
+
+        <div class="price-quantity">
+          <p class="price"> 0 </p>
+          <p class="price1 price"> 0 </p>
+          <div class="quantity">
+            <button class="increment">+</button>
+            <p class="quantity-number">1</p>
+            <button class="decrement">-</button>
+          </div>
+        </div>
+
+        <div class="rmButton">
+          <button class="rmbtn">Remove</button>
+        </div>
+
+      </div>
+    </section>
+  </template>
+
+  <section class="cart-section">
+    <div class="product-cart">
+      <section>
+        <div id="product-container"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="price-section">
+    <div class="cart-total">
+      <div class="product-total">
+        <p>Select offer summary</p>
+        <div class="product-order">
+          <p>Sub Total:</p>
+          <p class="product-sub-total"> 0 </p>
+        </div>
+      </div>
+      <div class="tax-container">
+        <p>Tax:</p>
+        <p class="product-tax">Rs.0</p>
+      </div>
+      <hr>
+      <div class="fianlPrice-container">
+        <p>Final Price:</p>
+        <p class="product-final-price"> 0 </p>
+      </div>
+    </div>
+  </section>
+  <!-- ! add to cart -->
+
+  <footer>
+    <div class="parent-footer">
+
+      <div class="shoping-footer">
+        <h3>Servicess</h3>
+        <ul class="list shoping-list">
+          <li>Mobile Phone</li>
+          <li>Mobile Repair</li>
+          <li>Smart Watch</li>
+          <li>Head Phones</li>
+        </ul>
+      </div>
+
+      <div class="experience-footer">
+        <h4>Experience</h4>
+        <ul class="list experience-list">
+          <li>Delivery</li>
+          <li>Contact Us</li>
+          <li>Payment Method</li>
+          <li>Return and Exchange</li>
+        </ul>
+      </div>
+
+      <div class="newlettr-footer">
+        <h5>News Letter</h5>
+        <p class="news-letter">
+          Be the first to know about latest products and other servoces
+        </p>
+        <input type="email" id="submit-btn" placeholder="your email address">
+      </div>
+    </div>
+
+    <p class="copyRight">&copy; 2024 Khanal Mobile Center. All Right Reserved</p>
+  </footer>
+
+  <script type="module" src="./cart.js"></script>
+</body>
+
+</html>

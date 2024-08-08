@@ -63,7 +63,7 @@ export const homeProductList = (product) => {
 
         // Add to cart
         templateClone.querySelector(".addButton").addEventListener("click", (event) => {
-            addTocart(event, id, stock, price, price1, memory, memory1);
+            addTocart(event, id, stock, price, price1, memory, memory1, name, image);
         })
 
         // Append the cloned template to the display container
